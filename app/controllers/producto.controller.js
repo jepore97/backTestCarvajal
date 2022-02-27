@@ -1,6 +1,6 @@
-const db = require("../models");
-const Producto = db.tutorials;
-const Op = db.Sequelize.Op;
+
+dataFake = require('../config/datosFake');
+const Producto = require('../models/product.model');
 
 // Create and Save a new Producto
 exports.create = (req, res) => {
@@ -134,16 +134,20 @@ exports.deleteAll = (req, res) => {
     });
 };
 
-// find all published Producto
-// exports.findAllPublished = (req, res) => {
-//   Producto.findAll({ where: { published: true } })
-//     .then(data => {
-//       res.send(data);
-//     })
-//     .catch(err => {
-//       res.status(500).send({
-//         message:
-//           err.message || "Some error occurred while retrieving tutorials."
-//       });
-//     });
-// };
+exports.dataFake=(req,res)=>{
+  dataFake.datos.forEach(async(producto)=>{
+    
+    console.log('producto: ', producto);
+   await Producto.create(producto)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(err => {
+      res.status(500).send({
+        message:
+          err.message || "Some error occurred while creating the Producto."
+      });
+    });
+  })
+ 
+}

@@ -1,5 +1,9 @@
-module.exports = (sequelize, Sequelize) => {
-  const Producto = sequelize.define("producto", {
+
+var Sequelize = require('sequelize');
+// importing connection database
+var db = require('../config/connectDb');
+
+  const Products = db.define("product", {
     
     price: {
       type: Sequelize.INTEGER
@@ -21,5 +25,5 @@ module.exports = (sequelize, Sequelize) => {
     }
   });
 
-  return Producto;
-};
+  module.exports =  Products;
+
