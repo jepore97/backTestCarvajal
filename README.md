@@ -7,5 +7,5 @@ Por favor sigue las indicaciones para levantar el servidor
 4. hasta el momento ya has levantado el servidor y has creado una base de datos sin información, si deseas registrar datos de prueba ejecuta el comando `npm run db:seed`, de lo contrario deberas crearlos manualmente en tu gestor de base de datos.
 #
 
-adjunto word con el modelo relacional
+Adjunto word con el modelo relacional
 
