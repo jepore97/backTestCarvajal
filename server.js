@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const dotenv= require('dotenv').config();
+// dotenv.config();
 const db = require("./app/models");
 var corsOptions = {
   origin: "http://localhost:4200"

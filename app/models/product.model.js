@@ -19,9 +19,6 @@ var db = require('../config/connectDb');
     },
     stock: {
       type: Sequelize.INTEGER
-    },
-    state:{ 
-      type: Sequelize.BOOLEAN
     }
   });
 
