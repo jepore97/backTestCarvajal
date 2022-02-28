@@ -6,7 +6,7 @@ module.exports = {
       price:2100,
       name: 'Cocacola',
       image: 'https://loremflickr.com/320/240/product',
-      description:'',
+      description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',
       stock:12,
       createdAt: new Date(),
       updatedAt: new Date()

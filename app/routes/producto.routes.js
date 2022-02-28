@@ -4,8 +4,7 @@ module.exports = app => {
   var router = require("express").Router();
 
   router.post("/", productos.create);
-  router.get("/datafake", productos.dataFake);
-
+  
   router.get("/", productos.findAll);
 
   router.get("/:id", productos.findOne);

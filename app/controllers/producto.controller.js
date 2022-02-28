@@ -1,5 +1,4 @@
 
-dataFake = require('../config/datosFake');
 const Producto = require('../models/product.model');
 
 // Create and Save a new Producto
@@ -133,21 +132,3 @@ exports.deleteAll = (req, res) => {
       });
     });
 };
-
-exports.dataFake=(req,res)=>{
-  dataFake.datos.forEach(async(producto)=>{
-    
-    console.log('producto: ', producto);
-   await Producto.create(producto)
-    .then(data => {
-      res.send(data);
-    })
-    .catch(err => {
-      res.status(500).send({
-        message:
-          err.message || "Some error occurred while creating the Producto."
-      });
-    });
-  })
- 
-}
